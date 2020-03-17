@@ -1,0 +1,106 @@
+@import @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
+
+header {
+  background-color: #211;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.gl-gallery {
+  margin: 50px auto;
+}
+
+.gl-mainImg {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.gl-mainImg > img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.gl-bottomWrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gl-thumbnailsWrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+}
+
+.gl-prevBtn,
+.gl-nextBtn {
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+.gl-prevBtn {
+  border-left: 5px solid #ccc;
+  border-top: 5px solid #ccc;
+  transform: rotate(-45deg);
+}
+
+.gl-nextBtn {
+  border-right: 5px solid #ccc;
+  border-top: 5px solid #ccc;
+  transform: rotate(45deg);
+}
+
+.gl-prevBtn:hover,
+.gl-nextBtn:hover {
+  border-color: gold;
+  cursor: pointer;
+}
+
+.gl-thumbnailImg {
+  margin: 10px;
+  border: 3px solid #ccc;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: all .2s;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gl-thumbnailImg:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.gl-active {
+  border-color: gold;
+}
